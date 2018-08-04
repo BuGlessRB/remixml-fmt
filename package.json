@@ -1,0 +1,31 @@
+{
+  "name": "remixml-fmt",
+  "version": "5.0.0",
+  "description": "Remixml component that renders to DOM using HTML in browsers",
+  "main": "remixml-fmt.min.js",
+  "browser": "remixml-fmt.min.js",
+  "scripts": {
+    "prepare": "./prepfiles"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "remixml": "*"
+  },
+  "devDependencies": {},
+  "directories": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BuGlessRB/remixml-fmt"
+  },
+  "keywords": [
+    "remixml",
+    "browser",
+    "render",
+    "DOM"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Stephen R. van den Berg <srb@cuci.nl>",
+  "license": "(ISC OR GPL-3.0)"
+}
