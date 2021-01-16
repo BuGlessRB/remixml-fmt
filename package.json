@@ -1,6 +1,6 @@
 {
   "name": "remixml-fmt",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Remixml component that renders to DOM using HTML in browsers",
   "main": "remixml-fmt.min.js",
   "browser": "remixml-fmt.min.js",
@@ -19,9 +19,13 @@
   },
   "keywords": [
     "remixml",
-    "browser",
-    "render",
-    "DOM"
+    "sprintf",
+    "strftime",
+    "date",
+    "currency",
+    "time",
+    "string",
+    "formatting"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"

@@ -8,7 +8,7 @@ Remixml component that add sprintf/strftime formatting support.
 
 ## Requirements
 
-It runs inside any webbrowser environment.
+It runs inside any node or webbrowser environment.
 
 ## Reference documentation
 
