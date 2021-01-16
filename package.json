@@ -1,6 +1,6 @@
 {
   "name": "remixml-fmt",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Remixml component that renders to DOM using HTML in browsers",
   "main": "remixml-fmt.min.js",
   "browser": "remixml-fmt.min.js",

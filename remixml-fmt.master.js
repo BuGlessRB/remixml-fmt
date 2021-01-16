@@ -197,7 +197,7 @@
     });
 
   function /** !Object */ factory(/** !Object */ rxml)
-  { rxml["abstract2txt"](procfmt);
+  { rxml["set_proc_fmt"](procfmt);
     return g;
   }
 
