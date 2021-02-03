@@ -147,12 +147,11 @@
     if (t == k)
       t = (currencyobj[cur] || cur)
         + fmtf(k, lang, 2);
-    return t.replace(spacesrx, '&nbsp;');
+    return t.replace(spacesrx, "\u00A0");
   }
 
-  function /** !Array */ procfmt(/** string */ fmt,/** * */ x,/** !Object */ $)
-  { var iscurrency;
-    var /** Array<string> */ r = fmt.match(varentrx);
+  function /** * */ procfmt(/** string */ fmt,/** * */ x,/** !Object */ $)
+  { var /** Array<string> */ r = fmt.match(varentrx);
     var p = r[3], lang = $["sys"] && $["sys"]["lang"] || undefined;
     switch (r[4])
     { case "c": x = String.fromCharCode(+x); break;
@@ -176,8 +175,7 @@
       default:
         x = r[4][0] === "t"
             ? strftime(r[5], /** @type {string} */(x), lang)
-            : /[A-Z]{3}/.test(r[4])
-              ? (iscurrency = fmtcur(+x, lang, r[4])) : x;
+            : /[A-Z]{3}/.test(r[4]) ? fmtcur(+x, lang, r[4]) : x;
     }
     if (r[1])
     { if (r[1].indexOf("0") >= 0 && (p = +r[2]))
@@ -186,7 +184,7 @@
       if (r[1].indexOf("+") >= 0 && +x >= 0)
         x = sp(/** @type {string} */(x), "+");
     }
-    return [x, iscurrency];
+    return x;
   }
 
   if (!O.assign)
