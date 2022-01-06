@@ -41,7 +41,7 @@
 
   function /** string */ pad0(/** number */ i, /** number */ p)
   { var /** string */ ret;
-    for (i < 0 && p--, ret = i + ""; ret.length < p; ret = "0" + ret) {}
+    for (ret = i + ""; ret.length < p; ret = "0" + ret) {}
     return ret;
   }
 
