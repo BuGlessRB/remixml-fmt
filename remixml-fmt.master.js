@@ -40,9 +40,7 @@
   function udate(t) { return t.valueOf() - t.getTimezoneOffset * 60000; }
 
   function /** string */ pad0(/** number */ i, /** number */ p)
-  { var /** string */ ret;
-    for (i < 0 && p--, ret = i + ""; ret.length < p; ret = "0" + ret) {}
-    return ret;
+  { return (i + "").padStart(p, "0");
   }
 
   function /** string */
@@ -186,13 +184,6 @@
     }
     return x;
   }
-
-  if (!O.assign)
-    O.defineProperty(O, "assign",
-    { "value": function(d, s, i)
-      { if (s) for (i in s) d[i] = s[i]; return d;
-      }
-    });
 
   function /** !Object */ factory(/** !Object */ rxml)
   { rxml["set_proc_fmt"](procfmt);
