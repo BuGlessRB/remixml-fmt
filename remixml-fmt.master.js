@@ -9,7 +9,7 @@
 /** @define {number} */ var VERBOSE = 0;
 
 // Cut BEGIN delete
-(function()
+(() =>
 { "use strict";
 // Cut END delete
 
@@ -65,7 +65,7 @@
       t.setDate(md - ((dy + 6) % 7) + 3);
       return t;
     }
-    return fmt.replace(alphanumsrx, function(a, p)
+    return fmt.replace(alphanumsrx, (a, p) =>
     { switch(p)
       { case "a": return ifm();
         case "A": return ifm(undefined, "long");
